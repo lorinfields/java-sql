@@ -17,20 +17,36 @@ WHERE City = "London";
 
 ### find all customers with postal code 1010. Returns 3 customers.
 > This can be done with SELECT and WHERE clauses
-
+SELECT  * 
+FROM Customers
+WHERE PostalCode = 1010;
 ### find the phone number for the supplier with the id 11. Should be (010) 9984510.
 > This can be done with SELECT and WHERE clauses
+SELECT  * 
+FROM Suppliers
+WHERE SupplierID = 11
 
 ### list orders descending by the order date. The order with date 1997-02-12 should be at the top.
 > This can be done with SELECT, WHERE, and ORDER BY clauses
+SELECT  * 
+FROM Orders
+ORDER BY OrderDate DESC
 
 ### find all suppliers who have names longer than 20 characters. You can use `length(SupplierName)` to get the length of the name. Returns 11 records.
 > This can be done with SELECT and WHERE clauses
+SELECT  * 
+FROM Suppliers
+WHERE length(SupplierName) > 20
+
 
 ### find all customers that include the word "market" in the name. Should return 4 records.
 > This can be done with SELECT and a WHERE clause using the LIKE keyword
 
 > Don't forget the wildcard '%' symbols at the beginning and end of your substring to denote it can appear anywhere in the string in question
+
+SELECT  * 
+FROM Customers
+WHERE CustomerName LIKE "%market%"
 
 ### add a customer record for _"The Shire"_, the contact name is _"Bilbo Baggins"_ the address is _"1 Hobbit-Hole"_ in _"Bag End"_, postal code _"111"_ and the country is _"Middle Earth"_.
 > This can be done with the INSERT INTO clause
